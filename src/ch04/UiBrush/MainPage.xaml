@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiBrush.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Frame>
+                <Image
+                x:Name="imageNet"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" >
+                </Image>
+                <Frame.Background>
+                        <LinearGradientBrush StartPoint=".5,0" EndPoint="0.5,1">
+                            <GradientStop Color="Red"
+                        Offset="0.0" />
+                            <GradientStop Color="White"
+                        Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+
+            </Frame>
+
+            <Label
+                Text="色の変更"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button
+                Text="赤"
+                Clicked="OnRedClicked"
+                    Margin="10" />
+                <Button
+                    Text="線形グラデ"
+                    Clicked="OnLinerClicked"
+                    Margin="10" />
+                <Button
+                    Text="円形グラデ"
+                    Clicked="OnCircleClicked"
+                    Margin="10" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

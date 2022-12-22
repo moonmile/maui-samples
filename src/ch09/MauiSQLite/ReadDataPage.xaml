@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSQLite.ReadDataPage"
+             Title="ReadDataPage">
+    <ScrollView>
+        <VerticalStackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="Center">
+            <Label 
+                Text="Read from SQLite"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="読み込み"
+                Clicked="Button_Clicked" />
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button
+                    Text="新規"
+                    Margin="10,0,10,0"
+                    Clicked="NewItemClicked" />
+                <Button
+                    Text="更新"
+                    Margin="10,0,10,0"
+                    Clicked="UpdateItemClicked" />
+            </HorizontalStackLayout>
+
+
+            <CollectionView
+                x:Name="coll"
+                ItemsSource="{Binding Items}"
+                SelectionMode="Single"
+                >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HeightRequest="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}" VerticalOptions="Center" Margin="5,0,0,0"/>
+                            <Label Text="{Binding Name}" Grid.Column="1" VerticalOptions="Center" />
+                            <Label Text="{Binding Age}" Grid.Column="2" VerticalOptions="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

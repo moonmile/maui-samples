@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestSample.MainPage">
+
+    <ScrollView>
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+                <Label
+                Text="別プロジェクトの利用"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+                <Label x:Name="textCount"/>
+                <Button 
+                Text="カウントアップ"
+                Clicked="OnCountUpClicked" />
+
+                <Entry x:Name="textA" />
+                <Entry x:Name="textB" />
+                <Button Text="数値で計算" Clicked="OnCalcNumberClicked" />
+                <Button Text="文字列で計算" Clicked="OnCalcStringClicked" />
+                <Label x:Name="textAnswer"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ScrollView>
+
+</ContentPage>

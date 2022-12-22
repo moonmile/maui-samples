@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmEntry.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+            <Label
+                Text="テキスト入力"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+
+            <Label
+                Text="名前"
+                FontSize="18" />
+            <Entry Text="{Binding Name}" />
+            <Label
+                Text="住所"
+                FontSize="18"
+                />
+            <Entry Text="{Binding Address, Mode=Default}"/>
+
+            <Button
+                Text="送信"
+                Command="{Binding OnClickCommit}"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="{Binding Message}"
+                FontSize="18"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

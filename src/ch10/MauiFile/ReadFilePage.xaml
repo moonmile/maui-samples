@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFile.ReadFilePage"
+             Title="ReadFilePage">
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+        <Label 
+            Text="ファイル読み込み"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button 
+                Text="System.IO.File で読み込み"
+                Clicked="FileReadClicked" />
+
+        <Button 
+                Text="StreamReader で読み込み"
+                Clicked="StreamReadClicked" />
+
+        <Button 
+                Text="Raw データを読み込み"
+                Clicked="RawReadClicked" />
+
+        <Label x:Name="message" />
+    </VerticalStackLayout>
+</ContentPage>

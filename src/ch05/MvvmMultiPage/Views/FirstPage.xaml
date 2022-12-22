@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmMultiPage.FirstPage"
+             Title="FirstPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+        <Label 
+            Text="This is First page."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button Text="Click me" 
+                Command="{Binding OnButtonClicked}" />
+        <Label 
+            Text="{Binding Count, StringFormat='Count is {0}'}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+   </ScrollView>
+</ContentPage>

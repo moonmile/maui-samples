@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiButton.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="ボタンを配置"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="btnCounter"
+                Text="Click me"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center">
+            </Button>
+
+            <Button
+                Text="現在時刻"
+                Clicked="OnDateTimeClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="textNow"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

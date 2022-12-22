@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="WebApiAccess.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WebApiAccess"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="GET"
+            ContentTemplate="{DataTemplate local:HttpGetPage}"
+            Route="HttpGetPage" />
+
+        <ShellContent
+            Title="POST"
+            ContentTemplate="{DataTemplate local:HttpPostPage}"
+            Route="HttpPostPage" />
+
+        <ShellContent
+            Title="OneData"
+            ContentTemplate="{DataTemplate local:GetJsonPage}"
+            Route="GetJsonPage" />
+
+        <ShellContent
+            Title="List"
+            ContentTemplate="{DataTemplate local:JsonListPage}"
+            Route="JsonListPage" />
+
+        <ShellContent
+            Title="Send"
+            ContentTemplate="{DataTemplate local:SendJsonPage}"
+            Route="SendJsonPage" />
+
+
+    </TabBar>
+
+</Shell>

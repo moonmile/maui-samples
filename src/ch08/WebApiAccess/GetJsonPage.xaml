@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebApiAccess.GetJsonPage"
+             Title="GetJsonPage">
+    <ScrollView>
+
+        <VerticalStackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="Center">
+            <Label 
+            Text="Get Json Data"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Button 
+                Text="ID指定でProjectを取得"
+                FontSize="18"
+                Clicked="Button_Clicked" />
+
+            <TableView Intent="Menu">
+                <TableRoot>
+                    <TableSection Title="Project">
+                        <TextCell Text="Name" Detail="{Binding Item.Name}" />
+                        <TextCell Text="Description" Detail="{Binding Item.Description}" />
+                        <TextCell Text="CreatedOn" Detail="{Binding Item.CreatedOn}" />
+                        <TextCell Text="UpdatedOn" Detail="{Binding Item.UpdatedOn}" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaviCollection.DetailPage"
+             Title="DetailPage">
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+        <Label 
+            Text="詳細情報"
+            FontSize="32"
+            HorizontalOptions="Center" />
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="ID" FontSize="18" />
+            <Label Text="Title" FontSize="18" Grid.Row="1" />
+            <Label Text="Price" FontSize="18" Grid.Row="2" />
+
+            <Label Text="{Binding Item.Id}" FontSize="18" Grid.Row="0" Grid.Column="2" />
+            <Label Text="{Binding Item.Title}" FontSize="18" Grid.Row="1" Grid.Column="2" />
+            <Label Text="{Binding Item.Price}" FontSize="18" Grid.Row="2" Grid.Column="2" />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

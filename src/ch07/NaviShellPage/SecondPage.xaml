@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaviShellPage.SecondPage"
+             Title="SecondPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label 
+                Text="This is second page"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <Label
+                FontSize="24"
+                Text="{ Binding Count, StringFormat='Count is {0}' }"
+                HorizontalOptions="Center" />
+            <Button
+                Text="Count up"
+                Clicked="OnCountClicked"
+                HorizontalOptions="Center" />
+            <Label
+                FontSize="24"
+                Text="{ Binding Message }"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

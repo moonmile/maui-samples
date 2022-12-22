@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmMultiPage.SettingPage"
+             Title="SettingPage">
+    <ScrollView>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="options">
+                    <SwitchCell Text="Airplane Mode"
+                        On="False" />
+                    <SwitchCell Text="Notifications"
+                        On="True" />
+                </TableSection>
+                <TableSection Title="user name">
+                    <EntryCell Label="Login"
+                       Placeholder="username" />
+                    <EntryCell Label="Password"
+                       Placeholder="password" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ScrollView>
+</ContentPage>

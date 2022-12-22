@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSQLite.UpdateItemPage"
+             Title="UpdateItemPage">
+    <VerticalStackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="Center">
+        <Label 
+            Text="データの更新"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="更新"
+                Clicked="Button_Clicked" />
+
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection>
+                    <EntryCell Label="Name" Text="{Binding Name}" Placeholder="はるな" />
+                    <EntryCell Label="Name" Text="{Binding Age}" Placeholder="0" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </VerticalStackLayout>
+</ContentPage>
