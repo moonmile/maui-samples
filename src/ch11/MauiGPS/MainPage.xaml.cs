@@ -34,7 +34,7 @@ public class ViewModel : Prism.Mvvm.BindableBase
 
 			GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
 			var loc = await Geolocation.Default.GetLocationAsync(request);
-			this.Message = $"緯度 {loc.Latitude:#.000} 経度 {loc.Altitude:#.000}";
+			this.Message = $"緯度 {loc.Latitude:#.000} 経度 {loc.Longitude:#.000}";
 		});
 	}
 }
