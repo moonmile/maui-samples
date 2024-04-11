@@ -10,23 +10,23 @@
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}"
-            Route="/" />
+            Route="" />
         <ShellContent
             Title="First"
             ContentTemplate="{DataTemplate local:FirstPage}"
-            Route="/first" />
+            Route="first" />
         <ShellContent
             Title="Second"
             ContentTemplate="{DataTemplate local:SecondPage}"
-            Route="/second" />
+            Route="second" />
         <ShellContent
             Title="Other"
             ContentTemplate="{DataTemplate local:OtherPage}"
-            Route="/other" />
+            Route="other" />
         <ShellContent
             Title="Setting"
             ContentTemplate="{DataTemplate local:SettingPage}"
-            Route="/setting" />
+            Route="setting" />
         <!-- ハンバーガーメニューがでるように ShellContent を増やしておく -->
         <!--
         <ShellContent
